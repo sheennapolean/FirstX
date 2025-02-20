@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Team at FirstX</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'DM Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background: #219ebc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            color: #219ebc;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .list li {
+            font-size: 1.125rem;
+            margin-bottom: 15px;
+        }
+
+        .form-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-container button {
+            background-color: #219ebc;
+            color: white;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #1d7a85;
+        }
+
+        footer {
+            background-color: #219ebc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+            .go-home-btn {
+        background-color: #219ebc;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    .go-home-btn:hover {
+        background-color: #1d7a85;
+    }
+
+    .go-home-btn:active {
+        transform: scale(0.98);
+    }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Join Our Team at FirstX</h1>
+    <button onclick="window.location.href='index.html';" class="go-home-btn">
+        <i class="fas fa-home"></i> Go to Home
+</header>
+
+<div class="content">
+    <h2>At FirstX, we believe in nurturing talent and fostering a dynamic work environment.</h2>
+    <p>We are always on the lookout for passionate and driven professionals to join our growing team. Whether you are experienced or just starting out, we offer exciting career opportunities across HR, Finance, IT, and Operations.</p>
+
+    <h3>Why Work with FirstX?</h3>
+    <ul class="list">
+        <li>Remote-friendly work culture</li>
+        <li>Opportunity to work with diverse industries</li>
+        <li>Continuous learning and development</li>
+        <li>Competitive compensation and benefits</li>
+    </ul>
+
+    <p>Interested in joining us? Fill out the form below to upload your CV and share your details.</p>
+
+    <div class="form-container">
+        <h3>Career Application Form</h3>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="position">Position Applying For:</label>
+            <input type="text" id="position" name="position" required>
+
+            <label for="cv">Attach CV:</label>
+            <input type="file" id="cv" name="cv" required>
+
+            <label for="additional-info">Additional Information:</label>
+            <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>Alternatively, you can email us at <a href="mailto:hr@firstx.com" style="color: white;">hr@firstx.com</a></p>
+</footer>
+
+</body>
+</html>
