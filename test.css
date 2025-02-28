@@ -1,8 +1,25 @@
-body {
+html,body {
     font-family: 'Montserrat', sans-serif;
     background-color: #545157;
     color: #545157;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
+
+section {
+    scroll-snap-align: start; /* Ensure each section aligns at the start */
+    height: 100vh; /* Make each section take the full viewport height */
+    scroll-padding-top: 0; /* Adjust if needed */
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 .sidebar {
     width: 12rem;
     transition: transform 0.3s ease-in-out;

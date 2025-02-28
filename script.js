@@ -1,69 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);  // Make sure both plugins are registered
 
-    // Select all sections
-    const sections = document.querySelectorAll(".section");
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
+  window.onload = function () {
+    // Ensure GSAP and plugins are registered
+    if (typeof ScrollTrigger !== 'undefined' && typeof ScrollToPlugin !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    hamburger.addEventListener("click", function () {
-        console.log("clicked");
-        navLinks.classList.toggle("active");
-    });
+      // Select all fade-in elements
+      const fadeInElements = document.querySelectorAll(".fade-in");
 
-    sections.forEach((section, index) => {
-        gsap.fromTo(
-            section,
-            { opacity: 0, y: 100 },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1.5,
-                ease: "power2.out",
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    end: "top 30%",
-                    toggleActions: "play none none reverse",
-                },
-            }
-        );
-    });
+      // Ensure that fade-in elements exist
+      if (fadeInElements.length > 0) {
+        fadeInElements.forEach((element) => {
+          gsap.from(element, {
+            scrollTrigger: {
+              trigger: element,
+              start: "top bottom",  // Trigger when element comes into the viewport
+              end: "top top",
+              scrub: true,  // Smooth animation
+            },
+            opacity: 0,  // Fade in from 0 opacity
+            y: 50,  // Move element up to its original position
+            duration: 1,
+          });
+        });
+      } else {
+        console.error("No elements with the class 'fade-in' found.");
+      }
 
-    // Scroll snapping to next section
-    let scrollTimeout;
-    document.querySelector(".wrapper").addEventListener("wheel", (event) => {
-        if (scrollTimeout) {
+      // Scroll snapping to next section
+      let scrollTimeout;
+      const wrapper = document.querySelector(".wrapper");
+
+      // Check if wrapper exists before adding event listener
+      if (wrapper) {
+        wrapper.addEventListener("wheel", (event) => {
+          if (scrollTimeout) {
             clearTimeout(scrollTimeout);
-        }
+          }
 
-        scrollTimeout = setTimeout(() => {
+          scrollTimeout = setTimeout(() => {
             const direction = event.deltaY > 0 ? "down" : "up";
             snapToNextSection(direction);
-        }, 200);
-    });
+          }, 200);
+        });
+      } else {
+        console.error("No element with class 'wrapper' found.");
+      }
 
-    function snapToNextSection(direction) {
+      function snapToNextSection(direction) {
         const sections = document.querySelectorAll(".section");
-        const currentScroll = document.querySelector(".wrapper").scrollTop;
+        const currentScroll = wrapper.scrollTop;
         let targetSection;
 
         sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (direction === "down" && sectionTop > currentScroll + 10) {
-                targetSection = section;
-                return;
-            } else if (direction === "up" && sectionTop < currentScroll - 10) {
-                targetSection = section;
-            }
+          const sectionTop = section.offsetTop;
+          if (direction === "down" && sectionTop > currentScroll + 10) {
+            targetSection = section;
+            return;
+          } else if (direction === "up" && sectionTop < currentScroll - 10) {
+            targetSection = section;
+          }
         });
 
         if (targetSection) {
-            gsap.to(".wrapper", {
-                scrollTo: targetSection,  // Scroll to the section directly
-                duration: 1,
-                ease: "power2.inOut"
-            });
+          gsap.to(wrapper, {
+            scrollTo: targetSection,  // Scroll to the section directly
+            duration: 1,
+            ease: "back.out(0.7)"
+          });
         }
+      }
+    } else {
+      console.error("ScrollTrigger or ScrollToPlugin plugin is not loaded.");
     }
-});
+  };
