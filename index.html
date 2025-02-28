@@ -3,143 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FirstX - Empowering Entrepreneurs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Collapsible Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;600&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="test.css">
 </head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar"  id="nav-links">
-        <img src="images/logo.png" class="logo" alt="FirstX Logo">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
-            <a href="#why">Why Choose Us</a>
-            <a href="#contact">Contact Us</a>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <!-- Sidebar Toggle Button -->
+
+    
+    <!-- Sidebar -->
+    <div class="sidebar sidebar-hidden p-5 flex flex-col fixed h-full left-0 top-0 w-[26.5%]  text-white items-center transition-all duration-300" id="sidebar">
+        <h1 class="text-4xl md:text-6xl font-bold p-1 mt-10">FirstX</h1>
+        <p class="mt-2 text-sm md:text-base">Empowering Entrepreneurs, Elevating Success.</p>
+    </div>
+    
+    <!-- Main Content -->
+    <nav class="fixed top-0 left-0 w-full text-white flex justify-center items-center px-6 py-3 shadow-md z-50",id="nav">
+        <button class="text-2xl p-2 absolute left-4 focus:outline-none" onclick="toggleSidebar()">☰</button>
+        <div class="nav-links flex gap-6">
+            <a href="index.html" class="hover:text-gray-300">Home</a>
+            <a href="#about" class="hover:text-gray-300">About Us</a>
+            <a href="#services" class="hover:text-gray-300">Our Services</a>
+            <a href="#why" class="hover:text-gray-300">Why Choose Us</a>
+            <a href="#contact" class="hover:text-gray-300">Contact Us</a>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-        <a href="career.html"><button class="cta">Join Us</button></a>
+    </nav>
+    <main class="flex-1 p-10 main-content" id="main-content">
+        <div class="image-container">
+            <img src="bg.png" alt="Nature" class="w-full h-auto rounded-lg shadow-lg">
+    
+        <!-- Overlay Text -->
+        <div class="absolute top-5 text-center text-white">
+            <h1 class="text-6xl font-bold">FirstX</h1>
+            <p class="text-lg mt-2 px-4 rounded-md">
+                Empowering Entrepreneurs, Elevating Success.
+            </p>
     </div>
-    <div class="wrapper">
-        <section id="home" class="section">
-            <div class="content">
-                <img src="images/home.jpg" class="hero" alt="FirstX Hero Image">
-                
-                <div class="text">
-                    <h1>Welcome to FirstX</h1>
-                    <h2>Empowering Entrepreneurs, Elevating Success.</h2>
-                    <p>We help entrepreneurs transform ideas into thriving businesses with expert support in HR, Finance, IT, and Operations.</p>
-                    <p>Partner with us for streamlined processes, scalable solutions, and sustainable growth.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="section">
-            <div class="content">
-                <h1>About Us</h1>
-                <p>At FirstX, we are passionate about fueling entrepreneurial journeys through customized solutions and strategic partnerships.</p>
-                <p>With 20+ experienced professionals and over 100 specialized services, we provide the tools and guidance entrepreneurs need to succeed.</p>
-                <p>Our mission is to help you build, manage, and grow your business with confidence.</p>
-                <p>Our vision is to become the most trusted partner for entrepreneurs globally, delivering excellence, innovation, and results.</p>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="content">
-                <h1>Our Services</h1>
-        
-                <div class="services-container">
-                    <div class="service-box">
-                        <h2>HR Solutions for Entrepreneurs</h2>
-                        <ul>
-                            <li>Tailored talent acquisition and onboarding support</li>
-                            <li>Payroll, compliance, and policy management</li>
-                            <li>Employee engagement strategies for growing teams</li>
-                            <li>HR policy development (Leave, POSH, Data Privacy)</li>
-                            <li>Training programs to enhance team productivity</li>
-                        </ul>
-                    </div>
-        
-                    <div class="service-box">
-                        <h2>Finance Solutions</h2>
-                        <ul>
-                            <li>Financial planning, budgeting, and cost optimization</li>
-                            <li>Taxation, compliance, and advisory services</li>
-                            <li>Cash flow management for startups and growing businesses</li>
-                        </ul>
-                    </div>
-        
-                    <div class="service-box">
-                        <h2>IT Solutions</h2>
-                        <ul>
-                            <li>Scalable IT infrastructure and cloud solutions</li>
-                            <li>Software development and technology integration</li>
-                            <li>Cybersecurity and data protection</li>
-                            <li>Technical support tailored for entrepreneurial needs</li>
-                        </ul>
-                    </div>
-        
-                    <div class="service-box">
-                        <h2>Operations Excellence</h2>
-                        <ul>
-                            <li>Business process design and SOP creation</li>
-                            <li>Project management and operational efficiency</li>
-                            <li>Workflow optimization</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="why" class="section">
-            <div class="content">
-                <h1>Why Entrepreneurs Choose FirstX</h1>
-                <ul>
-                    <li>Experienced team of 20+ professionals</li>
-                    <li>100+ services designed to support entrepreneurial growth</li>
-                    <li>Customized solutions that adapt to your business needs and budget</li>
-                    <li>No geographical limits – supporting entrepreneurs everywhere</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <div class="content">
-                <h1>Contact Us</h1>
-                <p>Ready to elevate your entrepreneurial journey? Let’s build something great together.</p>
-                
-                <!-- Contact Form -->
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        
-            <!-- Footer Content within the Section -->
-            <div class="footer-content">
-                <p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@firstX.in">hello@firstX.in</a></p>
-                <p><i class="fa fa-phone"></i> Phone: +91-XXXXXXXXXX</p>
-                <p><i class="fa fa-share-alt"></i> Connect with us on social media for insights and updates on entrepreneurship and business growth.</p>
-            </div>
-        </section>
-        
-        
-        
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+        </div>
+        <h2 class="text-6xl font-semibold mt-4 text-center">Welcome</h2>
+    </main>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
+            sidebar.classList.toggle('sidebar-hidden');
+            mainContent.classList.toggle('shifted');
+        }
+    </script>
 </body>
 </html>
