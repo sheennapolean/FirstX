@@ -3,143 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FirstX - Empowering Entrepreneurs</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Collapsible Sidebar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@400;600&family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+
+    <!-- ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+
+    <!-- ScrollToPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+
+    <!-- Your Custom Script -->
+    <script src="script.js"></script>
+
+    <!-- Your Custom Script -->
+<script src="script.js"></script>
+    <link rel="stylesheet" href="test.css">
 </head>
-<body>
-    <!-- Navbar -->
-    <div class="navbar"  id="nav-links">
-        <img src="images/logo.png" class="logo" alt="FirstX Logo">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Our Services</a>
-            <a href="#why">Why Choose Us</a>
-            <a href="#contact">Contact Us</a>
+<body class="flex flex-col items-center justify-center min-h-screen  text-white">
+    
+    <!-- Sidebar -->
+    <div class="sidebar sidebar-hidden p-5 flex flex-col fixed h-full left-0 top-0 w-[26.5%] md:w-1/4 sm:w-1/3 bg-gray-800 text-white items-center transition-all duration-300 z-50" id="sidebar">
+    <!-- Header Section -->
+    <h1 class="text-4xl md:text-6xl font-bold p-1 mt-10 text-center">FirstX</h1>
+    <p class="mt-2 text-sm md:text-base text-center">Empowering Entrepreneurs, Elevating Success.</p>
+    
+    <!-- About Us Section -->
+        <div class="flex-grow flex items-center justify-center text-center mt-10 px-4">
+            <div class="max-w-md w-full">
+                <!-- About Us Heading on Top of the Paragraph -->
+                <h1 class="text-2xl font-bold mb-4">About Us</h1>
+                <p class="text-sm sm:text-base md:text-lg">
+                    At FirstX, we are passionate about fueling entrepreneurial journeys through customized solutions and strategic partnerships.
+                </p>
+            </div>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
-        <a href="career.html"><button class="cta">Join Us</button></a>
     </div>
+    
+    <div class="md:hidden relative">
+        <!-- Hamburger Button -->
+        <button class="text-2xl block p-2 fixed top-4 right-4 focus:outline-none z-50" onclick="toggleNavBar()">☰</button>
+        
+        <!-- Mobile Nav Bar -->
+        <div id="mobileNav" class="nav-bar hidden bg-gray-800 fixed right-0 top-0 w-30  text-white z-40 transition-transform duration-300 ease-in-out">
+            <div class="nav-links flex flex-col gap-6 p-6">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#about" class="hover:text-gray-300" onclick="toggleSidebar()">About Us</a>
+                <a href="#services" class="hover:text-gray-300">Our Services</a>
+                <a href="#why" class="hover:text-gray-300">Why Choose Us</a>
+                <a href="#contact" class="hover:text-gray-300">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Desktop Navbar (Normal) -->
+    <nav class="hidden fixed top-0 w-full md:flex justify-center items-center px-6 py-3 shadow-md fix z-50">
+        <div class="nav-links flex gap-6">
+            <a href="#home" class="hover:text-gray-300">Home</a>
+            <a href="#about" class="hover:text-gray-300" onclick="toggleSidebar()">About Us</a>
+            <a href="#services" class="hover:text-gray-300">Our Services</a>
+            <a href="#why" class="hover:text-gray-300">Why Choose Us</a>
+            <a href="#contact" class="hover:text-gray-300">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
     <div class="wrapper">
-        <section id="home" class="section">
-            <div class="content">
-                <img src="images/home.jpg" class="hero" alt="FirstX Hero Image">
+        <section class="relative w-full h-screen flex justify-center items-center" id="home">
+            <!-- Fullscreen Background Image -->
+            <div class="relative w-full h-full">
+                <img src="bg.png" alt="Nature" class="w-full h-full object-cover">
                 
-                <div class="text">
-                    <h1>Welcome to FirstX</h1>
-                    <h2>Empowering Entrepreneurs, Elevating Success.</h2>
-                    <p>We help entrepreneurs transform ideas into thriving businesses with expert support in HR, Finance, IT, and Operations.</p>
-                    <p>Partner with us for streamlined processes, scalable solutions, and sustainable growth.</p>
+                <div class="absolute inset-0 flex flex-col items-center text-white bg-[#2E2E2E] bg-opacity-60 text-center px-6 py-10">
+                    <!-- Elegant Heading at the Top -->
+                    <h1 class="text-5xl md:text-7xl font-bold tracking-wide animate-fadeInUp font-['Playfair_Display'] text-[#C9A24A]">
+                        FirstX
+                    </h1>
+                
+                    <!-- Tagline -->
+                    <p class="text-lg md:text-2xl font-medium animate-fadeIn delay-200 font-['Cormorant_Garamond'] text-[#E5C07B] mt-4">
+                        Empowering Entrepreneurs, Elevating Success.
+                    </p>
+                
+                    <!-- Business Description - Centered in the Middle -->
+                    <div class="flex-grow flex items-top justify-end text-right mt-10 px-4">
+                        <p class="mt-1 max-w-2xl text-base md:text-lg animate-fadeIn delay-400 font-['Montserrat'] text-[#FFFFFF]">
+                            We help entrepreneurs transform ideas into thriving businesses with expert support in  
+                            <span class="font-semibold text-[#E5C07B]">HR, Finance, IT,</span> and 
+                            <span class="font-semibold text-[#E5C07B]">Operations</span>.  
+                            Partner with us for streamlined processes, scalable solutions, and sustainable growth.
+                        </p>
+                    </div>
                 </div>
+                             
             </div>
         </section>
-
-        <section id="about" class="section">
-            <div class="content">
-                <h1>About Us</h1>
-                <p>At FirstX, we are passionate about fueling entrepreneurial journeys through customized solutions and strategic partnerships.</p>
-                <p>With 20+ experienced professionals and over 100 specialized services, we provide the tools and guidance entrepreneurs need to succeed.</p>
-                <p>Our mission is to help you build, manage, and grow your business with confidence.</p>
-                <p>Our vision is to become the most trusted partner for entrepreneurs globally, delivering excellence, innovation, and results.</p>
-            </div>
-        </section>
-
-        <section id="services" class="section">
-            <div class="content">
-                <h1>Our Services</h1>
-        
-                <div class="services-container">
-                    <div class="service-box">
-                        <h2>HR Solutions for Entrepreneurs</h2>
-                        <ul>
-                            <li>Tailored talent acquisition and onboarding support</li>
+        <!-- About Us Section -->
+        <section id="services" class="section text-white bg-gradient-to-r from-[#545157] via-[#333] to-[#212121] flex flex-col items-center justify-center">
+            <h1 class="text-2xl sm:text-3xl font-bold text-center py-4 sm:py-5">Our Services</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-3 sm:p-4 justify-center">
+                <!-- HR Solutions -->
+                <div class="shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#333]">
+                    <img src="hr.png" alt="HR Solutions" class="w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover mx-auto">
+                    <div class="p-3 sm:p-4">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3">HR Solutions for Entrepreneurs</h3>
+                        <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                            <li>Talent acquisition and onboarding support</li>
                             <li>Payroll, compliance, and policy management</li>
-                            <li>Employee engagement strategies for growing teams</li>
+                            <li>Employee engagement for growing teams</li>
                             <li>HR policy development (Leave, POSH, Data Privacy)</li>
-                            <li>Training programs to enhance team productivity</li>
+                            <li>Training programs to enhance productivity</li>
                         </ul>
                     </div>
+                </div>
         
-                    <div class="service-box">
-                        <h2>Finance Solutions</h2>
-                        <ul>
-                            <li>Financial planning, budgeting, and cost optimization</li>
-                            <li>Taxation, compliance, and advisory services</li>
-                            <li>Cash flow management for startups and growing businesses</li>
+                <!-- Finance Solutions -->
+                <div class="shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#333]">
+                    <img src="finance.png" alt="Finance Solutions" class="w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover mx-auto">
+                    <div class="p-3 sm:p-4">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3">Finance Solutions</h3>
+                        <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                            <li>Financial planning and budgeting</li>
+                            <li>Taxation, compliance, and advisory</li>
+                            <li>Cash flow management for startups</li>
                         </ul>
                     </div>
+                </div>
         
-                    <div class="service-box">
-                        <h2>IT Solutions</h2>
-                        <ul>
-                            <li>Scalable IT infrastructure and cloud solutions</li>
-                            <li>Software development and technology integration</li>
+                <!-- IT Solutions -->
+                <div class="shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#333]">
+                    <img src="IT.png" alt="IT Solutions" class="w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover mx-auto">
+                    <div class="p-3 sm:p-4">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3">IT Solutions</h3>
+                        <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                            <li>Scalable IT infrastructure and cloud</li>
+                            <li>Software development and integration</li>
                             <li>Cybersecurity and data protection</li>
-                            <li>Technical support tailored for entrepreneurial needs</li>
+                            <li>Technical support for entrepreneurs</li>
                         </ul>
                     </div>
+                </div>
         
-                    <div class="service-box">
-                        <h2>Operations Excellence</h2>
-                        <ul>
-                            <li>Business process design and SOP creation</li>
-                            <li>Project management and operational efficiency</li>
+                <!-- Operations Excellence -->
+                <div class="shadow-lg rounded-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-[#333]">
+                    <img src="Operations.png" alt="Operations Excellence" class="w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 object-cover mx-auto">
+                    <div class="p-3 sm:p-4">
+                        <h3 class="text-lg sm:text-xl font-semibold mb-3">Operations Excellence</h3>
+                        <ul class="list-disc list-inside space-y-1 text-xs sm:text-sm">
+                            <li>Business process design and SOPs</li>
+                            <li>Project management and efficiency</li>
                             <li>Workflow optimization</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="why" class="section">
-            <div class="content">
-                <h1>Why Entrepreneurs Choose FirstX</h1>
-                <ul>
-                    <li>Experienced team of 20+ professionals</li>
-                    <li>100+ services designed to support entrepreneurial growth</li>
-                    <li>Customized solutions that adapt to your business needs and budget</li>
-                    <li>No geographical limits – supporting entrepreneurs everywhere</li>
-                </ul>
+               
+        
+        
+         
+        
+        <!-- Why Choose Us Section -->
+        <section class="section bg-gradient-to-r from-[#545157] via-[#333] to-[#212121] text-white py-16 px-6 min-h-screen flex items-center justify-center" id="why">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-[#C9A24A] mb-8">
+                    Why Entrepreneurs Choose FirstX
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Point 1 -->
+                    <div class="flex flex-col items-center justify-center text-center">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor" class="h-12 w-12 text-[#E5C07B]">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v18h14V3H5z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Experienced Team</h3>
+                        <p class="text-base font-['Montserrat']">20+ professionals dedicated to your success.</p>
+                    </div>
+        
+                    <!-- Point 2 -->
+                    <div class="flex flex-col items-center justify-center text-center">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor" class="h-12 w-12 text-[#E5C07B]">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2l9 9-9 9-9-9 9-9z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">100+ Services</h3>
+                        <p class="text-base font-['Montserrat']">Services designed to fuel your business growth.</p>
+                    </div>
+        
+                    <!-- Point 3 -->
+                    <div class="flex flex-col items-center justify-center text-center">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor" class="h-12 w-12 text-[#E5C07B]">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v8m0 0H8m4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Customized Solutions</h3>
+                        <p class="text-base font-['Montserrat']">Tailored to adapt to your unique business needs.</p>
+                    </div>
+        
+                    <!-- Point 4 -->
+                    <div class="flex flex-col items-center justify-center text-center">
+                        <div class="mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22" stroke="currentColor" class="h-12 w-12 text-[#E5C07B]">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12h6m0 0l-3-3m3 3l-3 3m-8-3H3m0 0l3-3m-3 3l3 3" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">No Geographical Limits</h3>
+                        <p class="text-base font-['Montserrat']">Supporting entrepreneurs globally with no borders.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <div class="content">
-                <h1>Contact Us</h1>
-                <p>Ready to elevate your entrepreneurial journey? Let’s build something great together.</p>
-                
-                <!-- Contact Form -->
-                <form action="#" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        
-            <!-- Footer Content within the Section -->
-            <div class="footer-content">
-                <p><i class="fa fa-envelope"></i> Email: <a href="mailto:hello@firstX.in">hello@firstX.in</a></p>
-                <p><i class="fa fa-phone"></i> Phone: +91-XXXXXXXXXX</p>
-                <p><i class="fa fa-share-alt"></i> Connect with us on social media for insights and updates on entrepreneurship and business growth.</p>
+        <!-- /* Contact Us Section */ -->
+        <section class="section bg-gradient-to-r from-[#545157] via-[#333] to-[#212121] text-white py-16 px-6 min-h-screen flex items-center justify-center" id="contact">
+            <div class="max-w-6xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold font-['Playfair_Display'] text-[#C9A24A] mb-8">
+                    Contact Us
+                </h2>
+                <p class="text-lg md:text-xl font-['Montserrat'] mb-8">
+                    Ready to elevate your entrepreneurial journey? Let’s build something great together.
+                </p>
+                <div class="space-y-4 mb-8">
+                    <p class="text-base font-['Montserrat']">Email: <a href="mailto:hello@firstX.in" class="text-[#E5C07B]">hello@firstX.in</a></p>
+                    <p class="text-base font-['Montserrat']">Phone: <span class="text-[#E5C07B]">+91-XXXXXXXXXX</span></p>
+                </div>
+                <div class="social-links flex justify-center gap-8">
+                    <a href="https://facebook.com" target="_blank" class="text-[#E5C07B] hover:text-[#C9A24A]">
+                        <i class="fab fa-facebook-f h-8 w-8"></i>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="text-[#E5C07B] hover:text-[#C9A24A]">
+                        <i class="fab fa-twitter h-8 w-8"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="text-[#E5C07B] hover:text-[#C9A24A]">
+                        <i class="fab fa-linkedin-in h-8 w-8"></i>
+                    </a>
+                </div>
             </div>
         </section>
         
-        
-        
+                       
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('sidebar-hidden');
+        }
+        function toggleNavBar() 
+        {
+        const sidebar = document.getElementById('mobileNav');
+        sidebar.classList.toggle('hidden');  // Toggle visibility of the sidebar
+        }
+    </script>
 </body>
 </html>
