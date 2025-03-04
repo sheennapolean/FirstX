@@ -19,35 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
           toggleActions: "play reverse play reverse"
       }
   });
-  gsap.from("#services .card", {
-    opacity: 0,               // Start with opacity 0
-    y: 50,                    // Start 50px below
-    duration: 1,              // Duration of the animation
-    stagger: 0.2,             // Delay of 0.2s between each card's animation
-    scrollTrigger: {
-      trigger: "#services",    // Trigger the animation when #services is in view
-      start: "top 10%",         // Start the animation when the top of the container reaches 80% of the viewport
-      end: "bottom 20%",       // End the animation when the bottom of the container reaches 20% of the viewport
-      scrub: true,             // Makes the animation smooth and synced with scroll position
-      toggleActions: "play reverse play reverse"  // Animation reverses when scrolling up
-    },
-    ease: "power3.out"         // Smooth easing function
-  });
-
-  gsap.utils.toArray(".card").forEach((card, index) => {
-      gsap.to(card, {
-          scrollTrigger: {
-              trigger: card,
-              start: "top 80%",   
-              end: "bottom 20%",  
-              scrub: true,       
-              toggleActions: "play reverse play reverse"
-          },
-          opacity: 1,
-          y: 0,
-          duration: 1
-      });
-  });
+  
 
   gsap.from("#benefits h1", { 
       opacity: 0, 
@@ -58,6 +30,33 @@ document.addEventListener("DOMContentLoaded", function() {
           start: "top 85%",
           toggleActions: "play reverse play reverse"
       }
+  });
+  gsap.from("#services .fade-in", {
+    opacity: 0,
+    y: 30,
+    duration: 1,
+    stagger: 0.2,  // Adds stagger effect for the items in the benefits section
+    scrollTrigger: {
+      trigger: "#services",
+      start: "top 80%",  // Trigger animation when the top of the section hits 80% of the viewport
+      end: "bottom 20%",
+      scrub: true,
+      toggleActions: "play reverse play reverse"  // Animation reverses when scrolling up
+    }
+  });
+
+  gsap.utils.toArray(".card").forEach((feature, index) => {
+      gsap.from(feature, { 
+          opacity: 0, 
+          x: -50, 
+          duration: 1, 
+          delay: index * 0.2, 
+          scrollTrigger: {
+              trigger: feature,
+              start: "top 85%",
+              toggleActions: "play reverse play reverse"
+          }
+      });
   });
 
   // Adding Fade-In Effect to Benefits Section
