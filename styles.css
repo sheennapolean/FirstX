@@ -35,7 +35,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #A7A7A7, #eeeeee);
+    background: linear-gradient(to right, #bbbbbb, #dddddd);
     padding: 0 10%;
 }
 
@@ -57,13 +57,13 @@ body, html {
 
 .text-content h2 {
     font-size: 52px;
-    color: #ffcc00;
+    color: #3c3b49;
     font-weight: bold;
 }
 
 .text-content p {
     font-size: 18px;
-    color: #555;
+    color: #3c3b49;
 }
 
 .cta-button {
@@ -109,7 +109,7 @@ body, html {
 }
 
 .about-us h2 {
-    font-size: 42px;
+    font-size: 28px;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
@@ -217,7 +217,7 @@ body, html {
 }
 
 .text_why h1 {
-    font-size: 28px;
+    font-size:42 px;
     color: #333;
     margin-bottom: 15px;
 }
