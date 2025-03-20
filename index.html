@@ -3,189 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FirstX</title>
-    <link rel="icon" type="image/png" href="images/logo.png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <title>Xpert-One</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="md:hidden relative">
-        <!-- Hamburger Button -->
-        <button class="text-2xl block p-2 fixed top-4 right-4 focus:outline-none z-50" onclick="toggleNavBar()">☰</button>
-        
-        <!-- Mobile Nav Bar -->
-        <div id="mobileNav" class="nav-bar hidden bg-gray-800 fixed right-0 top-0 w-30  text-white z-40 transition-transform duration-300 ease-in-out">
-            <div class="nav-links flex flex-col gap-6 p-6">
-                <a href="#home" class="hover:text-gray-300 block">Home</a>
-                <a href="#services" class="hover:text-gray-300 block">Our Services</a>
-                <a href="#benefits" class="hover:text-gray-300 block">Why Choose Us</a>
-                <a href="#about-us" class="hover:text-gray-300 block">About Us</a>
-                <a href="#contact" class="hover:text-gray-300 block">Contact Us</a>
-                <a href="career.html" class="hover:text gray-300 block">Careers</a>
+
+    <header class="header">
+        <h1 class="brand">Xpert-One</h1>
+        <img src="logo.png" alt="Xpert-One Logo">
+    </header>
+
+    <section class="hero" data-aos="fade-up">
+        <div class="main">
+            <div class="text-content">
+                <h2>Empowering Entrepreneurs, <br> Elevating Success</h2>
+                <p>Your partner in business</p>
+                <button class="cta-button">READY TO TAKE THE LEAP?</button>
+            </div>
+            <div class="illustration">
+                <img src="homePage.png" data-src="homePage.gif" alt="Business Illustration" class="lazyload">
             </div>
         </div>
-    </div>
-    
-    
-    <!-- Desktop Navbar (Normal) -->
-    <nav class="hidden fixed top-0 w-full md:flex justify-center items-center px-6 py-3 shadow-md fix z-50">
-        <div class="nav-links flex gap-6">
-            <a href="#home" class="hover:text-gray-300">Home</a>
-            <a href="#services" class="hover:text-gray-300">Our Services</a>
-            <a href="#benefits" class="hover:text-gray-300">Why Choose Us</a>
-            <a href="#about-us" class="hover:text-gray-300" >About Us</a>
-            <a href="#contact" class="hover:text-gray-300">Contact Us</a>
-            <a href="career.html" class="hover:text gray-300">Careers</a> 
-        </div>
-    </nav>
-    <div class="wraper">
-        <!-- Home -->
-        <section id="home" class="Home-container">
-            <div class="Home-text text-2xl text-center">
-                <h1 class="text-4xl block">FIRSTX</h1>
-                <p class="text-lg block">Empowering Entrepreneurs, Elevating Success.</p>
-                <p class="text-lg block">We help entrepreneurs transform ideas into thriving businesses with expert support in HR, Finance, IT, and Operations. </p>
-            
-            </div>  
-            <div class="home">
-                <img src="images/Globe.png" alt="Image" class="globe">
-                <img src="images/Man1.png" alt="Image" class="man1">
-                <img src="images/Man2.png" alt="Image" class="man2">
-            </div>
-        </section>
-        <!-- Services -->
-        <section id="services" class="services-container">
-            <div class="services-text text-2xl text-center">
-                <h1 class="text-8xl block py-8">Our Services</h1>
-                <div class="cardDiv">
-                    <!-- HR Solutions Card -->
-                    <div class="card">
-                        <img src="images/hr.png" alt="HR Image" class="hr">
-                        <h2 class="text-2xl">HR Solutions for Entrepreneurs</h2>
-                    </div>
-                    <!-- Finance Solutions Card -->
-                    <div class="card">
-                        <img src="images/finance.png" alt="Finance Image" class="finance">
-                        <h2 class="text-2xl">Finance Solutions</h2>
-                    </div>
-                    <!-- IT Solutions Card -->
-                    <div class="card">
-                        <img src="images/IT.png" alt="IT Image" class="it">
-                        <h2 class="text-2xl">IT Solutions</h2>
-                    </div>
-                    <!-- Operations Excellence Card -->
-                    <div class="card">
-                        <img src="images/Operations.png" alt="Operations Image" class="operations">
-                        <h2 class="text-2xl">Operations Excellence</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <section id="benefits" class="benefits-wrapper">
-            <div class="content-box">
-                <h1 class="heading text-8xl block py-8">Why FirstX</h1>
-                <div class="feature">
-                    <i class="fas fa-users feature-icon"></i>
-                    <div class="feature-text">
-                        <h2>Experienced Team</h2>
-                        <p>Experienced team of 20+ professionals</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-briefcase feature-icon"></i>
-                    <div class="feature-text">
-                        <h2>Comprehensive Services</h2>
-                        <p>100+ services designed to support entrepreneurial growth</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-check-circle feature-icon"></i>
-                    <div class="feature-text">
-                        <h2>Customized Solutions</h2>
-                        <p>Solutions that adapt to your business needs and budget</p>
-                    </div>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-globe feature-icon"></i>
-                    <div class="feature-text">
-                        <h2>Global Support</h2>
-                        <p>No geographical limits – supporting entrepreneurs everywhere</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
- 
-
-    <!-- About Us Section -->
-    <section id="about-us" class="w-full h-screen flex items-center justify-center">
-        <div class="container mx-auto text-center px-6 animate-fade-in">
-            <h1 class="heading text-4xl block py-8 md:text-2xl">About Us</h1>
-            <p class="text-lg  max-w-3xl mx-auto mb-6">
-                At FirstX, we are passionate about fueling entrepreneurial journeys through customized solutions and strategic partnerships. 
-                With 20+ experienced professionals and over 100 specialized services, we provide the tools and guidance entrepreneurs need to succeed. 
-                Our mission is to help you build, manage, and grow your business with confidence.
+    <section class="about-us" data-aos="fade-up">
+        <div class="about-us-container">
+            <h2>About Us</h2>
+            <p>
+                At <strong>Xpert-One</strong>, we are dedicated to empowering entrepreneurs with tailored solutions and strategic partnerships.
+                With over <strong>20 years of collective experience</strong> and a team of <strong>100+ specialists</strong>, we offer a wide range of services designed to support every phase of your business journey.
             </p>
-            <p class="text-lg max-w-3xl mx-auto">
-                Our vision is to become the most trusted partner for entrepreneurs globally, delivering excellence, innovation, and results.
+            <p>
+                Whether you’re starting from the ground up or looking to scale, we provide the tools, resources, and expert guidance necessary to navigate the challenges and opportunities that come with entrepreneurship.
+                Our mission is simple: <strong>to help you build, manage, and grow your business with confidence</strong>.
+            </p>
+            <p>
+                As we look to the future, our vision is clear: <strong>to be the most trusted partner for entrepreneurs worldwide</strong>, delivering unparalleled <strong>excellence, innovation, and results</strong>.
             </p>
         </div>
     </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <!-- Card 1 -->
+            <div class="card" data-aos="fade-right" data-aos-delay="100">
+                <h3><i class="fas fa-users"></i> HR Solutions</h3>
+                <ul>
+                    <li><i class="fas fa-user-check"></i> Tailored talent acquisition & onboarding</li>
+                    <li><i class="fas fa-file-invoice-dollar"></i> Payroll & compliance management</li>
+                    <li><i class="fas fa-people-arrows"></i> Employee engagement strategies</li>
+                    <li><i class="fas fa-clipboard-check"></i> HR policy development</li>
+                    <li><i class="fas fa-chalkboard-teacher"></i> Training programs</li>
+                </ul>
+            </div>
     
-    <!-- Contact  -->
-    <section class="w-full h-screen flex items-center justify-center bg-gray-900 text-white" id="contact">
-        <div class="container mx-auto text-center px-6 animate-slide-up">
-            <h2 class="heading text-4xl block py-8 md:text-2xl">Contact Us</h2>
-            <p class="text-lg mb-4">Ready to elevate your entrepreneurial journey? Let’s build something great together.</p>
+            <!-- Card 2 -->
+            <div class="card" data-aos="fade-right" data-aos-delay="200">
+                <h3><i class="fas fa-chart-line"></i> Finance Solutions</h3>
+                <ul>
+                    <li><i class="fas fa-coins"></i> Financial planning & budgeting</li>
+                    <li><i class="fas fa-file-contract"></i> Taxation & compliance services</li>
+                    <li><i class="fas fa-money-bill-wave"></i> Cash flow management</li>
+                </ul>
+            </div>
     
-            <!-- Contact Details -->
-            <p class="text-lg mb-2">
-                <i class="fas fa-envelope text-blue-400"></i> 
-                Email: <a href="mailto:hello@firstX.in" class="text-blue-400 hover:underline">hello@firstX.in</a>
-            </p>
-            <p class="text-lg mb-2">
-                <i class="fas fa-phone text-blue-400"></i> 
-                Phone: <a href="tel:+917736176182" class="text-blue-400 hover:underline">+91-7736176182</a>
-            </p>
-            <p class="text-lg mb-4">
-                <i class="fab fa-whatsapp text-green-400"></i> 
-                WhatsApp: <a href="https://wa.me/+917736176182" class="text-green-400 hover:underline">Chat with us</a>
-            </p>
+            <!-- Card 3 -->
+            <div class="card" data-aos="fade-right" data-aos-delay="300">
+                <h3><i class="fas fa-laptop-code"></i> IT Solutions</h3>
+                <ul>
+                    <li><i class="fas fa-cloud"></i> Scalable cloud infrastructure</li>
+                    <li><i class="fas fa-code"></i> Software development & integration</li>
+                    <li><i class="fas fa-shield-alt"></i> Cybersecurity & data protection</li>
+                    <li><i class="fas fa-headset"></i> Technical support</li>
+                </ul>
+            </div>
     
-            <!-- Social Media Links -->
-            <p class="text-lg">Connect with us on social media for insights and updates on entrepreneurship and business growth.</p>
-            <div class="flex justify-center space-x-6 mt-4">
-                <a href="https://facebook.com" target="_blank" class="text-blue-400 text-3xl hover:scale-110 transition"><i class="fab fa-facebook"></i></a>
-                <a href="https://twitter.com" target="_blank" class="text-blue-400 text-3xl hover:scale-110 transition"><i class="fab fa-twitter"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="text-blue-400 text-3xl hover:scale-110 transition"><i class="fab fa-linkedin"></i></a>
-                <a href="https://instagram.com" target="_blank" class="text-pink-400 text-3xl hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+            <!-- Card 4 -->
+            <div class="card" data-aos="fade-right" data-aos-delay="400">
+                <h3><i class="fas fa-cogs"></i> Operations Excellence</h3>
+                <ul>
+                    <li><i class="fas fa-project-diagram"></i> Business process design</li>
+                    <li><i class="fas fa-tasks"></i> Project management</li>
+                    <li><i class="fas fa-stream"></i> Workflow optimization</li>
+                </ul>
             </div>
         </div>
-    </section>    
+    </section>
     
-        
-    </div>   
+    
 
+    <section class="why" data-aos="fade-up">
+        <div class="text_why">
+            <h1>Why US</h1>
+            <ul>
+                <li>Experienced team of 20+ professionals</li>
+                <li>100+ services designed to support entrepreneurial growth</li>
+                <li>Customized solutions that adapt to your business needs and budget</li>
+                <li>No geographical limits – supporting entrepreneurs everywhere</li>
+            </ul>
+        </div>
+        <div class="image">
+            <img src="whyPage.png" />
+        </div>
+    </section>
 
-<script>
-    const menuBtn = document.getElementById('menu-btn');
-    function toggleSidebar() {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('sidebar-hidden');
-        }
-        function toggleNavBar() 
-        {
-        const sidebar = document.getElementById('mobileNav');
-        sidebar.classList.toggle('hidden');  // Toggle visibility of the sidebar
-        };
-  
-</script>
+    
+    <section class="contact-us" data-aos="fade-up"> 
+        <div class="image">
+            <img src="contactPage.png" />
+        </div>
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p class="contact-message">
+                Ready to elevate your entrepreneurial journey? Let’s build something great together.
+            </p>
+            <div class="contact-details">
+                <p><strong><i class="fas fa-envelope"></i> Email:</strong> 
+                    <a href="mailto:hello@Xpert-one.in">hello@Xpert-one.in</a>
+                </p>
+                <p><strong><i class="fas fa-phone"></i> Phone:</strong> +91-917736176182</p>
+                <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> 
+                    <a href="https://wa.me/+91917736176182" target="_blank">Chat on WhatsApp</a>
+                </p>
+                <p><strong><i class="fas fa-briefcase"></i> Carrier:</strong> 
+                    <a href="/career.html" target="_blank">Join Us</a>
+                </p>
+            </div>
+            <p class="social-media-message">
+                Connect with us on social media for insights and updates on entrepreneurship and business growth.
+            </p>
+            <div class="social-icons">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,  // Animation duration (in ms)
+            easing: 'ease-in-out', // Animation easing
+            once: false,  // Reset the animation each time it comes into view (both scroll up and down)
+            offset: 200,  // Offset distance (in px) before the animation is triggered
+        });
+    </script>
 </body>
-
 </html>

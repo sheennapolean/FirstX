@@ -1,252 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Our Team at FirstX</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Cormorant+Garamond&family=Montserrat&family=Lato&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Career with Us | Xpert-one</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* Base Styles */
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Nunito', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #D1D1D1;
-            color: #2E2E2E;
-            opacity: 0;
-            animation: fadeIn 1s forwards;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            color: #333;
         }
 
         header {
-            background: #2E2E2E;
-            color: #FFFFFF;
-            padding: 20px;
+            background-color: #79acad;
+            color: white;
             text-align: center;
-            animation: slideInHeader 1s ease-out forwards;
+            padding: 30px 0;
         }
 
-        h1 {
+        header h1 {
             margin: 0;
-            font-size: 3rem;
-            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 700;
         }
 
-        .content {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: #FFFFFF;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            animation: fadeInContent 1.5s ease-out forwards;
+        header p {
+            font-size: 18px;
+            margin-top: 5px;
         }
 
-        .content h2 {
-            font-size: 2.5rem;
-            color: #C9A24A;
-            margin-bottom: 20px;
-            font-family: 'Cormorant Garamond', serif;
-            opacity: 0;
-            animation: fadeInText 1s ease-in forwards 0.5s;
+        .career-page {
+            padding: 60px 20px;
         }
 
-        .content p {
-            font-size: 1.125rem;
-            line-height: 1.8;
+        .career-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .career-header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .career-header p {
+            font-size: 18px;
             color: #555;
+        }
+
+        .career-introduction-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px; /* Card width */
+            margin: 0 auto; /* Center card horizontally */
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .career-introduction-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .career-introduction-card p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .career-introduction-card strong {
+            color: #FFDE59; /* Highlighted "Xpert-one" */
+        }
+
+
+        .why-work-with-us {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        .why-work-with-us h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .why-work-with-us ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .why-work-with-us li {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            color: #333;
+            width: 220px;
+        }
+
+        .why-work-with-us i {
+            margin-right: 15px;
+            font-size: 22px;
+            color: #007bff;
+        }
+
+        .career-application {
+            display: flex;
+            flex-direction: column;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .career-application:hover {
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .career-application h2 {
+            text-align: center;
+            font-size: 28px;
+            color: #333;
             margin-bottom: 30px;
         }
 
-        .list {
-            list-style-type: none;
-            padding-left: 0;
+        .career-application form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
-        .list li {
-            font-size: 1.125rem;
-            margin-bottom: 15px;
+        .form-field {
+            display: flex;
+            flex-direction: column;
         }
 
-        .form-container {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #F5F5F5;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            opacity: 0;
-            animation: fadeInForm 1s ease-out forwards 1.5s;
+        .form-field label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            color: #555;
         }
 
-        .form-container input,
-        .form-container textarea,
-        .form-container button {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
+        .form-field input,
+        .form-field textarea {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            background-color: #f9f9f9;
+            transition: border 0.3s ease;
         }
 
-        .form-container input:focus,
-        .form-container textarea:focus {
-            border-color: #C9A24A;
+        .form-field input:focus,
+        .form-field textarea:focus {
             outline: none;
+            border-color: #007bff;
+            background-color: #fff;
         }
 
-        .form-container button {
-            background-color: #C9A24A;
-            color: white;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            text-transform: uppercase;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-container button:hover {
-            background-color: #E5C07B;
-        }
-
-        footer {
-            background-color: #1C1C1C;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
-            animation: fadeInFooter 1s ease-out forwards 2s;
-        }
-
-        .go-home-btn {
-            background-color: #C9A24A;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 1rem;
+        .form-field button {
+            padding: 12px 25px;
+            font-size: 18px;
             font-weight: 600;
-            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
             cursor: pointer;
-            margin-top: 15px;
-            text-transform: uppercase;
             transition: background-color 0.3s ease;
         }
 
-        .go-home-btn:hover {
-            background-color: #E5C07B;
+        .form-field button:hover {
+            background-color: #0056b3;
         }
 
-        .go-home-btn:active {
-            transform: scale(0.98);
+        .form-field button i {
+            margin-right: 10px;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
+        .career-application p {
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            color: #555;
         }
 
-        @keyframes slideInHeader {
-            from {
-                transform: translateY(-50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
+        .career-application a {
+            color: #007bff;
+            text-decoration: none;
         }
 
-        @keyframes fadeInContent {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
+        .career-application a:hover {
+            text-decoration: underline;
         }
 
-        @keyframes fadeInText {
-            from {
-                opacity: 0;
+        @media (max-width: 768px) {
+            .career-header h1 {
+                font-size: 30px;
             }
-            to {
-                opacity: 1;
-            }
-        }
 
-        @keyframes fadeInForm {
-            from {
-                opacity: 0;
+            .why-work-with-us ul {
+                flex-direction: column;
             }
-            to {
-                opacity: 1;
-            }
-        }
 
-        @keyframes fadeInFooter {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
+            .career-application {
+                padding: 20px;
             }
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h1>Xpert-one</h1>
+        <p>Your Partner in Business Growth</p>
+    </header>
 
-<header>
-    <h1>Join Our Team at FirstX</h1>
-    <button onclick="window.location.href='index.html';" class="go-home-btn">
-        <i class="fas fa-home"></i> Go to Home
-    </button>
-</header>
+    <section class="career-page" data-aos="fade-up">
+        <div class="career-header" data-aos="fade-right">
+            <h1>Career with Us</h1>
+            <p>Join Our Team at Xpert-one</p>
+        </div>
 
-<div class="content">
-    <h2>At FirstX, we believe in nurturing talent and fostering a dynamic work environment.</h2>
-    <p>We are always on the lookout for passionate and driven professionals to join our growing team. Whether you are experienced or just starting out, we offer exciting career opportunities across HR, Finance, IT, and Operations.</p>
+        <div class="career-introduction-card" data-aos="fade-left">
+            <p>At <strong>Xpert-one</strong>, we believe in nurturing talent and fostering a dynamic work environment. We are always on the lookout for passionate and driven professionals to join our growing team. Whether you are experienced or just starting out, we offer exciting career opportunities across HR, Finance, IT, and Operations.</p>
+        </div>
 
-    <h3>Why Work with FirstX?</h3>
-    <ul class="list">
-        <li>Remote-friendly work culture</li>
-        <li>Opportunity to work with diverse industries</li>
-        <li>Continuous learning and development</li>
-        <li>Competitive compensation and benefits</li>
-    </ul>
+        <div class="why-work-with-us" data-aos="zoom-in">
+            <h2>Why Work with Xpert-one?</h2>
+            <ul>
+                <li><i class="fas fa-laptop-house"></i> Remote-friendly work culture</li>
+                <li><i class="fas fa-industry"></i> Opportunity to work with diverse industries</li>
+                <li><i class="fas fa-graduation-cap"></i> Continuous learning and development</li>
+                <li><i class="fas fa-dollar-sign"></i> Competitive compensation and benefits</li>
+            </ul>
+        </div>
 
-    <p>Interested in joining us? Fill out the form below to upload your CV and share your details.</p>
+        <div class="career-application" data-aos="fade-up">
+            <h2>Career Application Form</h2>
+            <p>Interested in joining us? Fill out the form below to upload your CV and share your details.</p>
 
-    <div class="form-container">
-        <h3>Career Application Form</h3>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <form action="submit-application.php" method="POST" enctype="multipart/form-data">
+                <div class="form-field">
+                    <label for="name"><i class="fas fa-user"></i> Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <div class="form-field">
+                    <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <label for="phone">Phone:</label>
-            <input type="text" id="phone" name="phone" required>
+                <div class="form-field">
+                    <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
 
-            <label for="position">Position Applying For:</label>
-            <input type="text" id="position" name="position" required>
+                <div class="form-field">
+                    <label for="position"><i class="fas fa-briefcase"></i> Position Applying For:</label>
+                    <input type="text" id="position" name="position" required>
+                </div>
 
-            <label for="cv">Attach CV:</label>
-            <input type="file" id="cv" name="cv" required>
+                <div class="form-field">
+                    <label for="cv"><i class="fas fa-file-upload"></i> Attach CV:</label>
+                    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                </div>
 
-            <label for="additional-info">Additional Information:</label>
-            <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                <div class="form-field">
+                    <label for="additional-info"><i class="fas fa-pencil-alt"></i> Additional Information:</label>
+                    <textarea id="additional-info" name="additional-info" rows="4"></textarea>
+                </div>
 
-            <button type="submit">Submit Application</button>
-        </form>
-    </div>
-</div>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Submit Your Application</button>
+            </form>
 
-<footer>
-    <p>Alternatively, you can email us at <a href="mailto:hr@firstx.com" style="color: white;">hr@firstx.com</a></p>
-</footer>
+            <p>Alternatively, you can email us at <a href="mailto:hr@Xpert-one.co.in"><i class="fas fa-paperclip"></i> hr@Xpert-one.co.in</a></p>
+        </div>
+    </section>
 
+    <!-- AOS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
