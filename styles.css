@@ -229,7 +229,9 @@ body, html {
     text-align: center;
 }
 
-.about-us h2 {
+.about-us h2 
+{
+    padding: 10PX;
     font-size: 28px;
     font-weight: bold;
     color: #333;
