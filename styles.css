@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     color: black;
     text-align: center;
-    background: linear-gradient(to right, #bbbbbb, #dddddd);;
+    background: linear-gradient(to right, #5CA4A9, #dddddd);;
 }
 
 /* Header and Navbar */
@@ -156,7 +156,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to right, #bbbbbb, #dddddd);
+    background: linear-gradient(to right ,#ffbf46, #91c4d7 );
     padding: 0 10%;
 }
 
@@ -178,13 +178,13 @@ body, html {
 
 .text-content h2 {
     font-size: 52px;
-    color: #3c3b49;
+    color: #fcf9ed;
     font-weight: bold;
 }
 
 .text-content p {
     font-size: 18px;
-    color: #3c3b49;
+    color: #fcf9ed;
 }
 
 .cta-button {
