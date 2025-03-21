@@ -5,29 +5,150 @@ body, html {
     height: 100%;
     color: black;
     text-align: center;
+    background: linear-gradient(to right, #bbbbbb, #dddddd);;
 }
 
-/* Header */
+/* Header and Navbar */
 .header {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between; /* Spread out logo and navbar */
     align-items: center;
-    padding-left: 10px;
-    background-color  : #eeeeee;
+    background-color:transparent; /* Dark background for the navbar */
+    color: #3c3b49;
+    padding: 10px 20px;
 }
 
-.header img 
-{
-    translate:-10px;
-    width: 80px;
-    height: auto;
+/* Logo and Brand Section */
+.logo-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Horizontally center */
+    justify-content: center; /* Vertically center */
 }
 
+/* Ensure the brand name stays on a single line */
 .brand {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 700;
+    color: #3c3b49;
+    text-transform: uppercase;
+    margin-top: 10px; /* Space between the logo and brand name */
+    white-space: nowrap;  /* Prevent text from wrapping onto a new line */
 }
+
+/* Additional styles for the logo */
+.logo {
+    width: 50px; /* Adjust logo size */
+    height: auto;
+}   
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    
+    justify-content: center; /* Center the navbar links */
+    gap: 20px;
+    width: 100%;
+}
+
+.navbar a {
+    color: #3c3b49;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #f39c12; /* Golden color when hovering */
+}
+
+.navbar a.active {
+    color: #f39c12; /* Highlight active link */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #3c3b49;
+    border-radius: 3px;
+}
+
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns */
+        grid-template-rows: repeat(2, auto);    /* 2 rows */
+        gap: 5px;  /* Spacing between the items */
+        position: fixed;  /* Fix the navbar at the top */
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        background: white;
+        padding: 10px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border-radius: 10px;
+        z-index: 1000;  /* Ensure the navbar stays on top */
+    }
+
+    /* Circular navigation buttons */
+    .navbar a {
+        font-size: 0; /* Hide text */
+        width: 50px; /* Circle size */
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: #3c3b49; /* Dark background */
+        margin: 5px;
+        transition: background-color 0.3s ease, transform 0.2s;
+    }
+
+    /* Make icons inside visible */
+    .navbar a i {
+        font-size: 20px;
+        color: white;
+    }
+
+    /* Hover effect */
+    .navbar a:hover {
+        background-color: #f39c12;
+        transform: scale(1.1);
+    }
+
+    /* Show navbar when toggled */
+    .navbar.show {
+        display: flex;
+    }
+
+    /* Make the hamburger menu visible */
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Transition effect for navbar */
+.navbar {
+    transition: all 0.3s ease;
+}
+
 
 /* Hero Section */
 .hero {
