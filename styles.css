@@ -569,7 +569,10 @@ body {
   color: #000;
   gap: 40px;
 }
-
+.contact-section a
+{
+  color: #000 ;
+}
 .contact-left {
   flex: 1;
   min-width: 300px;
