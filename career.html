@@ -6,240 +6,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Career with Us | Xpert-one</title>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f9;
-            color: #333;
-        }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Merriweather', serif;
+        background-color: #000;
+        color: white;
+        line-height: 1.6;
+    }
 
-        header {
-            background-color: #79acad;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
 
+    .career-page {
+        margin: 60px auto;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .career-header h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+
+    .career-header p {
+        font-size: 20px;
+        color: #dddddd;
+        margin-bottom: 40px;
+    }
+
+    .career-introduction-card p {
+        font-size: 18px;
+        color: #dddddd;
+        background-color: #24006b;
+        padding: 30px;
+        border-radius: 16px;
+        margin-bottom: 50px;
+    }
+
+    .why-work-with-us h2,
+    .career-application h2 {
+        font-size: 32px;
+        color: #dddddd;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .why-work-with-us ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .why-work-with-us li {
+        font-size: 18px;
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .career-application p {
+        margin-bottom: 30px;
+        font-size: 18px;
+        text-align: center;
+
+    }
+
+    /* Form Styles */
+    form {
+        text-align: left;
+        background-color: #24006b;
+        padding: 40px 30px;
+        border-radius: 16px;
+        margin-bottom: 50px;
+    }
+
+    .form-field {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="file"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    button[type="submit"] {
+        padding: 12px 32px;
+        font-size: 16px;
+        border: 2px solid white;
+        border-radius: 30px;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: white;
+        color: #24006b;
+    }
+
+    .career-application a {
+        color: #f39c12;
+        text-decoration: none;
+    }
+
+    .career-application a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
         header h1 {
-            margin: 0;
-            font-size: 40px;
-            font-weight: 700;
-        }
-
-        header p {
-            font-size: 18px;
-            margin-top: 5px;
-        }
-
-        .career-page {
-            padding: 60px 20px;
-        }
-
-        .career-header {
-            text-align: center;
-            margin-bottom: 40px;
+            font-size: 32px;
         }
 
         .career-header h1 {
-            font-size: 36px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 10px;
+            font-size: 32px;
         }
 
-        .career-header p {
-            font-size: 18px;
-            color: #555;
-        }
-
-        .career-introduction-card {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            max-width: 800px; /* Card width */
-            margin: 0 auto; /* Center card horizontally */
-            text-align: center;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .career-introduction-card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .career-introduction-card p {
-            font-size: 18px;
-            color: #555;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .career-introduction-card strong {
-            color: #FFDE59; /* Highlighted "Xpert-one" */
-        }
-
-
-        .why-work-with-us {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-
-        .why-work-with-us h2 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .why-work-with-us ul {
-            list-style-type: none;
-            padding-left: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-
-        .why-work-with-us li {
-            font-size: 18px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            color: #333;
-            width: 220px;
-        }
-
-        .why-work-with-us i {
-            margin-right: 15px;
-            font-size: 22px;
-            color: #007bff;
-        }
-
-        .career-application {
-            display: flex;
-            flex-direction: column;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .career-application:hover {
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-        }
-
+        .why-work-with-us h2,
         .career-application h2 {
-            text-align: center;
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 30px;
+            font-size: 24px;
         }
 
-        .career-application form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        form {
+            padding: 20px;
         }
-
-        .form-field {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-field label {
-            font-size: 16px;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            color: #555;
-        }
-
-        .form-field input,
-        .form-field textarea {
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            background-color: #f9f9f9;
-            transition: border 0.3s ease;
-        }
-
-        .form-field input:focus,
-        .form-field textarea:focus {
-            outline: none;
-            border-color: #007bff;
-            background-color: #fff;
-        }
-
-        .form-field button {
-            padding: 12px 25px;
-            font-size: 18px;
-            font-weight: 600;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .form-field button:hover {
-            background-color: #0056b3;
-        }
-
-        .form-field button i {
-            margin-right: 10px;
-        }
-
-        .career-application p {
-            margin-top: 20px;
-            font-size: 16px;
-            text-align: center;
-            color: #555;
-        }
-
-        .career-application a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .career-application a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .career-header h1 {
-                font-size: 30px;
-            }
-
-            .why-work-with-us ul {
-                flex-direction: column;
-            }
-
-            .career-application {
-                padding: 20px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 
 <body>
-    <header>
-        <h1>Xpert-one</h1>
-        <p>Your Partner in Business Growth</p>
-        <a href="index.html" style="color: white; text-decoration: none; font-size: 18px; display: inline-block; margin-top: 10px;">
-            ← Home
-        </a>
-    </header>
+    <nav class="navbar">
+    <div class="logo"><a href="index.html">Xpert One Innovations</a></div>
+
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+
+    <ul class="nav-links" id="navMenu">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="index.html">Let's Talk</a></li>
+        <li><a href="#">FAQ</a></li>
+    </ul>
+    </nav>
 
     <section class="career-page" data-aos="fade-up">
         <div class="career-header" data-aos="fade-right">
@@ -265,37 +188,37 @@
             <h2>Career Application Form</h2>
             <p>Interested in joining us? Fill out the form below to upload your CV and share your details.</p>
 
-            <form action="submit-application.php" method="POST" enctype="multipart/form-data">
+            <form id="application-form">
                 <div class="form-field">
                     <label for="name"><i class="fas fa-user"></i> Name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
-
+            
                 <div class="form-field">
                     <label for="email"><i class="fas fa-envelope"></i> Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
-
+            
                 <div class="form-field">
                     <label for="phone"><i class="fas fa-phone"></i> Phone:</label>
                     <input type="tel" id="phone" name="phone" required>
                 </div>
-
+            
                 <div class="form-field">
                     <label for="position"><i class="fas fa-briefcase"></i> Position Applying For:</label>
                     <input type="text" id="position" name="position" required>
                 </div>
-
+            
                 <div class="form-field">
                     <label for="cv"><i class="fas fa-file-upload"></i> Attach CV:</label>
                     <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
                 </div>
-
+            
                 <div class="form-field">
                     <label for="additional-info"><i class="fas fa-pencil-alt"></i> Additional Information:</label>
                     <textarea id="additional-info" name="additional-info" rows="4"></textarea>
                 </div>
-
+            
                 <button type="submit"><i class="fas fa-paper-plane"></i> Submit Your Application</button>
             </form>
 
@@ -303,11 +226,6 @@
         </div>
     </section>
 
-    <!-- AOS Library -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 
 </html>

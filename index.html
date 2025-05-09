@@ -1,80 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xpert-One</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <!-- AOS CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xpert One Innovations</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <!-- Logo and Brand Section -->
-        <div class="logo-brand">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h1 class="brand">Xpert-One</h1>
-        </div>
-    
-        <!-- Navbar -->
-        <nav class="navbar">
-            <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
-            <a href="about.html"><i class="fas fa-user"></i><span>About</span></a>
-            <a href="services.html"><i class="fas fa-cogs"></i><span>Services</span></a>
-            <a href="why.html"><i class="fas fa-question-circle"></i><span>Why Us</span></a>
-            <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
-            <a href="career.html"><i class="fas fa-briefcase"></i><span>Career</span></a>
-        </nav>
-    
-        <!-- Hamburger Menu for Mobile -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </header>
 
+     <!-- Navbar -->
+    <nav class="navbar">
+    <div class="logo"><a href="#">Xpert One Innovations</a></div>
+
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+
+    <ul class="nav-links" id="navMenu">
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="#contact">Let's Talk</a></li>
+        <li><a href="#">FAQ</a></li>
+    </ul>
+    </nav>
     <!-- Hero Section -->
-    <section class="hero" data-aos="fade-up">
-        <div class="main">
-            <div class="text-content">
-                <h2>Empowering Entrepreneurs, <br> Elevating Success</h2>
-                <p>Your partner in business</p>
-                <a href="https://wa.me/+918590569759" target="_blank">
-                    <button class="cta-button">READY TO TAKE THE LEAP?</button>
-                </a>
-            </div>
-            <div class="illustration">
-                <img src="homePage.png" data-src="homePage.gif" alt="Business Illustration" class="lazyload">
-            </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Book <br>Your<br> Success</h1>
+
+            <a href="#contact" class="connect">Connect Us</a>
         </div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- image section -->
+    <section class ="boady_image">
+        <img src="images\body.avif">
+    </section>
+
+    <section class="mission-services">
+    <div class="mission-text">
+        <h2>Our Mission</h2>
+        <h3>Empowering Businesses</h3>
+        <p>"To empower businesses by providing affordable, dedicated support services in HR, Finance, IT, and Operations, enabling them to focus on growth while we take care of the rest."</p>
+    </div>
+
+    <!-- Overlapping image -->
+    <div class="mission-img fade-in">
+        <img src="images/Business Consultation.avif" alt="Mission Image" />
+    </div>
+
+    <div class="services">
+        <h2>Our Services</h2>
+        <p>At Xpert One, we don’t just support your business—we accelerate it. With tailored expertise in HR, Finance, IT, and Operations, we turn complexity into clarity and challenges into opportunities.</p>
+
+    </div>
+    </section>
+
+    <section class="services-g fade-in" >
+        <div class="service-grid">
+            <div class="service-card">
+            <span class="icon">*</span>
+            <h3>Operational Excellence</h3>
+            <p>At Xpert One, we transform operations from cost centers into competitive advantages. Our data-driven strategies eliminate inefficiencies, automate workflows, and optimize resources—so you can focus on growth, not bottlenecks.</p>
+            </div>
+
+            <div class="service-card">
+            <span class="icon">*</span>
+            <h3>Financial Advisory</h3>
+            <p>we go beyond number-crunching—we turn financial insights into competitive advantages. Whether you’re optimizing cash flow, securing investments, or navigating risk, our experts deliver tailored solutions that align with your ambitions.</p>
+            </div>
+
+            <div class="service-card">
+            <span class="icon">*</span>
+            <h3>HR Solutions</h3>
+            <p>We believe your workforce is your greatest asset. Our end-to-end HR solutions are designed to attract top talent, streamline operations, and foster a culture of excellence—freeing you to lead, innovate, and scale with confidence.</p>
+            </div>
+
+            <div class="service-card">
+            <span class="icon">*</span>
+            <h3>IT Support</h3>
+            <p>We keep your technology running seamlessly so your business never skips a beat. From proactive maintenance to strategic digital transformation, we provide reliable, scalable IT solutions tailored to your unique needs.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="stats-section fade-in">
+  <h1>Empowering <br> Businesses</h1>
+  <div class="stats-grid">
+    <div class="stat">
+      <div class="stat-number">200+</div>
+      <div class="stat-label">Services</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">20+</div>
+      <div class="stat-label">Professionals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Satisfaction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">13+</div>
+      <div class="stat-label">Years of Expertise</div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Focus Areas Section -->
+    <section class="focus-areas fade-in">
+    <h2>Focus Areas</h2>
+    
+    <div class="focus-grid">
+        <div class="focus-item">
+        <h3>HR Innovations</h3>
+        <p>Navigating the complexities of HR management to drive organizational success.</p>
+        </div>
+        <div class="focus-item">
+        <h3>Financial Advisory</h3>
+        <p>Providing strategic financial guidance tailored to your business needs.</p>
+        </div>
+        <div class="focus-item">
+        <h3>IT Solutions</h3>
+        <p>Delivering comprehensive IT solutions to support business growth.</p>
+        </div>
+        <div class="focus-item">
+        <h3>Operations Excellence</h3>
+        <p>Delivering streamlined operational solutions customized for your business growth.</p>
+        </div>
+    </div>
+
+    <div class="focus-button">
+        <a href="#contact" class="connect">Connect with Us</a>
+    </div>
+
+    <div class="focus-img fade-in">
+        <img src="images\Discussing the Numbers.avif" alt="Mission Image" />
+    </div>
+
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach-section fade-in">
+    <h2>Our Approach</h2>
+    <p class="subheading">Methodology for Success</p>
+
+    <div class="approach-step">
+        <div class="step-number">01</div>
+        <div class="step-title">In-Depth Analysis</div>
+        <div class="step-description">Identifying challenges and opportunities for your business needs</div>
+    </div>
+
+    <div class="approach-step">
+        <div class="step-number">02</div>
+        <div class="step-title">Tailored Solutions</div>
+        <div class="step-description">Crafting customized strategies aligned with your business goals</div>
+    </div>
+
+    <div class="approach-step">
+        <div class="step-number">03</div>
+        <div class="step-title">Efficient Execution</div>
+        <div class="step-description">Achieving impactful and sustainable business outcomes</div>
+    </div>
+
+    <div class="approach-step">
+        <div class="step-number">04</div>
+        <div class="step-title">Ongoing Support</div>
+        <div class="step-description">Continuous monitoring and advisory services</div>
+    </div>
+    </section>
+    
+
+
+    <section class="contact-section fade-in" id="contact">
+    <div class="contact-left">
+        <h2>Start Your<br>Journey</h2>
+        <p>+91-85905-69759 &nbsp;&nbsp; Kerala, India</p>
+        <p>hello@xpert-one.com</p>
+
+        <ul class="footer-links">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="career.html">Career with us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-right">
+        <h3>Reach Out to Rises</h3>
+        <form>
+        <label>First name *</label>
+        <input type="text" required>
+
+        <label>Last name *</label>
+        <input type="text" required>
+
+        <label>Email *</label>
+        <input type="email" required>
+
+        <label>Message</label>
+        <textarea rows="4"></textarea>
+
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+    </section>
+
+    <footer class="site-footer">
+  © 2025 by Xpertone Innovations Pvt Ltd
+</footer>
+    
+
     <script>
-        AOS.init({
-            duration: 1000,  // Animation duration (in ms)
-            easing: 'ease-in-out', // Animation easing
-            once: false,  // Reset the animation each time it comes into view (both scroll up and down)
-            offset: 200,  // Offset distance (in px) before the animation is triggered
-        });
-        const links = document.querySelectorAll('.navbar a');
-    links.forEach(link => {
-        link.addEventListener('click', () => {
-            // Remove active class from all links
-            links.forEach(link => link.classList.remove('active'));
-            // Add active class to clicked link
-            link.classList.add('active');
-        });
+    // Parallax Effect for Image
+    const image = document.querySelector('.boady_image img');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        image.style.transform = `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0005})`;
     });
 
-    // Toggle menu visibility in mobile view
-    function toggleMenu() {
-        document.querySelector(".navbar").classList.toggle("show");
+    // Hamburger Menu Toggle with Animation
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Scroll Reveal Animation
+    const revealElements = document.querySelectorAll('.fade-in');
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 100) {
+            el.classList.add('visible');
+        }
+        });
     }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll); // Trigger on load for already visible elements
     </script>
+    
 </body>
 </html>
