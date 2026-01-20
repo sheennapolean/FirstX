@@ -1,0 +1,175 @@
+/* ========================
+   Hero Section
+========================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* Important: keeps text from showing outside bounds */
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+   url("/images/bg_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  /* --- THE SCROLL MAGIC --- */
+  background-attachment: fixed; /* Keeps image fixed while content scrolls */
+  
+  z-index: 1;
+  animation: fadeInBg 2.5s ease-out forwards;
+}
+
+/* For mobile: 'background-attachment: fixed' often doesn't work well on iOS. 
+   This ensures it looks good on all devices. */
+@media (max-width: 1024px) {
+  .hero-bg {
+    background-attachment: scroll; /* Fallback for mobile performance */
+  }
+}
+
+
+/* FIX FOR MOBILE */
+@media (max-width: 768px) {
+  .hero-bg {
+    /* Fixed attachment breaks image scaling on mobile Safari/Chrome */
+    background-attachment: scroll; 
+    
+    /* Ensures the image fills the height without stretching */
+    height: 100%;
+    width: 100%;
+  }
+  
+  .hero {
+    /* Prevents the hero from being too tall on small phones */
+    min-height: 100vh; 
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 24px;
+  color: #ffffff;
+}
+
+/* --- STAGGERED ELEMENTS (Right to Left) --- */
+
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  opacity: 0;
+  /* Starts 100px to the right */
+  animation: revealLeft 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+}
+
+.hero-content p {
+  font-size: 20px;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  opacity: 0;
+  /* Longer delay for stagger */
+  animation: revealLeft 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s forwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  /* Final element in stagger */
+  animation: revealLeft 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.9s forwards;
+}
+.btn-primary, .btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  border-radius: 50px; /* Makes them perfectly round/pill-shaped */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;      /* Smaller text */
+  padding: 10px 24px;   /* Compact padding */
+}
+
+.btn-primary {
+  background:primary-blue;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid #ffffff; /* Thinner border for small look */
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: #ffffff;
+  color: #0f172a;
+  transform: translateY(-2px);
+}
+
+/* Adjusting SVG size for smaller buttons */
+.btn-primary svg, .btn-outline svg {
+  width: 16px;
+  height: 16px;
+}
+/* --- KEYFRAMES --- */
+
+@keyframes revealLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); /* Start at right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);    /* End at center */
+  }
+}
+
+@keyframes fadeInBg {
+  from { opacity: 0; filter: blur(5px); }
+  to { opacity: 1; filter: blur(0); }
+}
+
+/* --- BUTTONS --- */
+.btn-primary, .btn-outline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  padding: 16px 32px;
+}
+
+.btn-primary { background: #2563eb; color: #ffffff; border: none; }
+.btn-outline { background: transparent; border: 2px solid #ffffff; color: #ffffff; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 40px; }
+  .hero-content p { font-size: 18px; }
+}

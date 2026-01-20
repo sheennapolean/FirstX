@@ -1,0 +1,65 @@
+/* ========================
+   Leadership Section
+========================= */
+.leadership-section {
+  padding: 100px 15%;
+  background-color: #ffffff;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.leader-card {
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: left; /* Aligned with text style in screenshot 42 */
+  transition: transform 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-5px);
+}
+
+.leader-image {
+  height: 320px; /* Taller images as seen in the screenshot */
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px; /* Individual rounding for the image itself */
+  margin-bottom: 20px;
+}
+
+.leader-info {
+  padding: 10px 5px;
+}
+
+.leader-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.leader-info .role {
+  color: #2563eb; /* Primary Blue */
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.leader-info .specialty {
+  color: #64748b; /* Muted text */
+  font-size: 14px;
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+  .leader-image {
+    height: 280px;
+  }
+}

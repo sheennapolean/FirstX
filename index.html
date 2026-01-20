@@ -1,251 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xpert One Innovations</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Xpert-One: Expert consulting to drive business growth, digital transformation, and organizational success." />
+  <title>Xpert-One Consulting</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/contacts.css" />
+  <link rel="stylesheet" href="css/experts.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/heroanimations.css" />
+  <link rel="stylesheet" href="css/impact.css" />
+  <link rel="stylesheet" href="css/leadership.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/storyes.css" />
+  <link rel="stylesheet" href="css/testmony.css" />
 </head>
 <body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+  <nav class="nav-container">
+    <div class="nav-inner">
+      <div class="logo">Xpert-One</div>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-     <!-- Navbar -->
-    <nav class="navbar">
-    <div class="logo"><a href="#">Xpert One Innovations</a></div>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#impact">Results</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-btn">Get In Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+<div class="menu-backdrop"></div>
 
-    <ul class="nav-links" id="navMenu">
-        <li><a href="aboutus.html">About Us</a></li>
-        <li><a href="career.html">Career</a></li>
-        <li><a href="#contact">Let's Talk</a></li>
-        <li><a href="#">FAQ</a></li>
-    </ul>
-    </nav>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Book <br>Your<br> Success</h1>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Transform Your Business<br />with Xpert Consulting</h1>
+      <p>
+        We partner with organizations to drive sustainable growth, optimize operations,
+        and unlock new opportunities through strategic consulting and innovative solutions.
+      </p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn-primary">
+          Start with your XPERT
+          <svg viewBox="0 0 24 24">
+            <path d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#services" class="btn-outline">Explore Services</a>
+      </div>
+    </div>
+  </section>
 
-            <a href="#contact" class="connect">Connect Us</a>
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="services-header">
+        <h2>Our  Services</h2>
+        <p>
+          We deliver tailored solutions across multiple domains to help your business thrive
+          in today's dynamic environment.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- Strategic Planning -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 17l6-6 4 4 7-7" />
+              <path d="M14 7h7v7" />
+            </svg>
+          </div>
+          <h3>Strategic Planning</h3>
+          <p>Develop comprehensive strategies aligned with your business objectives and market opportunities.</p>
         </div>
-    </section>
 
-    <!-- image section -->
-    <section class ="boady_image">
-        <img src="images\body.avif">
-    </section>
-
-    <section class="mission-services">
-    <div class="mission-text">
-        <h2>Our Mission</h2>
-        <h3>Empowering Businesses</h3>
-        <p>"To empower businesses by providing affordable, dedicated support services in HR, Finance, IT, and Operations, enabling them to focus on growth while we take care of the rest."</p>
-    </div>
-
-    <!-- Overlapping image -->
-    <div class="mission-img fade-in">
-        <img src="images/Business Consultation.avif" alt="Mission Image" />
-    </div>
-
-    <div class="services">
-        <h2>Our Services</h2>
-        <p>At Xpert One, we don’t just support your business—we accelerate it. With tailored expertise in HR, Finance, IT, and Operations, we turn complexity into clarity and challenges into opportunities.</p>
-
-    </div>
-    </section>
-
-    <section class="services-g fade-in" >
-        <div class="service-grid">
-            <div class="service-card">
-            <span class="icon">*</span>
-            <h3>Operational Excellence</h3>
-            <p>At Xpert One, we transform operations from cost centers into competitive advantages. Our data-driven strategies eliminate inefficiencies, automate workflows, and optimize resources—so you can focus on growth, not bottlenecks.</p>
-            </div>
-
-            <div class="service-card">
-            <span class="icon">*</span>
-            <h3>Financial Advisory</h3>
-            <p>we go beyond number-crunching—we turn financial insights into competitive advantages. Whether you’re optimizing cash flow, securing investments, or navigating risk, our experts deliver tailored solutions that align with your ambitions.</p>
-            </div>
-
-            <div class="service-card">
-            <span class="icon">*</span>
-            <h3>HR Solutions</h3>
-            <p>We believe your workforce is your greatest asset. Our end-to-end HR solutions are designed to attract top talent, streamline operations, and foster a culture of excellence—freeing you to lead, innovate, and scale with confidence.</p>
-            </div>
-
-            <div class="service-card">
-            <span class="icon">*</span>
-            <h3>IT Support</h3>
-            <p>We keep your technology running seamlessly so your business never skips a beat. From proactive maintenance to strategic digital transformation, we provide reliable, scalable IT solutions tailored to your unique needs.</p>
+        <!-- Organizational Design -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h3>Organizational Design</h3>
+          <p>Optimize your organizational structure, culture, and processes for efficiency and engagement.</p>
         </div>
-    </div>
-    </section>
 
-    <section class="stats-section fade-in">
-  <h1>Empowering <br> Businesses</h1>
-  <div class="stats-grid">
-    <div class="stat">
-      <div class="stat-number">200+</div>
-      <div class="stat-label">Services</div>
+        <!-- Digital Transformation -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+            </svg>
+          </div>
+          <h3>Digital Transformation</h3>
+          <p>Leverage technology and innovation to modernize operations and enhance customer experience.</p>
+        </div>
+
+        <!-- Performance Improvement -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12h18M3 6h18M3 18h18" />
+            </svg>
+          </div>
+          <h3>Performance Improvement</h3>
+          <p>Identify bottlenecks and implement solutions to drive measurable operational efficiency and profitability.</p>
+        </div>
+
+        <!-- Change Management -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h3>Change Management</h3>
+          <p>Guide your organization through transitions with structured approaches to ensure adoption and minimize resistance.</p>
+        </div>
+
+        <!-- Data & Analytics -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 6h16M4 12h8M4 18h12" />
+            </svg>
+          </div>
+          <h3>Data & Analytics</h3>
+          <p>Transform data into actionable insights to inform decisions and uncover new opportunities for growth.</p>
+        </div>
+
+      </div>
     </div>
-    <div class="stat">
-      <div class="stat-number">20+</div>
-      <div class="stat-label">Professionals</div>
+  </section>
+
+
+  <section id="impact" class="impact-section">
+            <h1>Delivering Measurable Impact</h1>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">75+</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Years of Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">All India</span>
+                    <span class="stat-label">Locations Covered</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stories-section">
+            <h2>Featured Success Stories</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/images/ds.jpg');"></div>
+                    <div class="card-content">
+                        <p class="category">Financial Services</p>
+                        <h3> Accuracy, compliance, and financial clarity.</h3>
+                        <p class="metric">Your finances, professionally managed</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/images/op.jpg');"></div>
+                    <div class="card-content">
+                        <p class="category">Operational Excellence</p>
+                        <h3>Streamlining processes for scalable growth.</h3>
+                        <p class="metric">Efficiency that drives performance.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/images/cs.jpg');"></div>
+                    <div class="card-content">
+                        <p class="category">HR & Legal Support.</p>
+                        <h3>People management, backed by compliance.</h3>
+                        <p class="metric">Strong policies. Confident workplaces.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/images/iso.jpg');"></div>
+                    <div class="card-content">
+                        <p class="category">Training & Capability Development.</p>
+                        <h3> Building skills that power performance.</h3>
+                        <p class="metric">Empowering teams for tomorrow’s challenges.</p>
+                    </div>
+                </div>
+            </div>
+      </section>
+
+      <!-- <section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 5-4 8-4 8zm11 0c3 0 7-1 7-8V5h-7v8h4c0 5-4 8-4 8z"/>
+          </svg>
+        </div>
+        <p class="testimonial-text">
+          "Xpert-One transformed our operations and helped us achieve a 40% increase in efficiency within just six months. Their expertise and dedication are unmatched."
+        </p>
+        <div class="client-info">
+          <p class="client-name">Sarah Mitchell</p>
+          <p class="client-title">CEO, TechVision Industries</p>
+          <p class="client-company">Fortune 500 Technology Company</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 5-4 8-4 8zm11 0c3 0 7-1 7-8V5h-7v8h4c0 5-4 8-4 8z"/>
+          </svg>
+        </div>
+        <p class="testimonial-text">
+          "The strategic insights provided by Xpert-One were instrumental in our successful market expansion. Their team became true partners in our growth journey."
+        </p>
+        <div class="client-info">
+          <p class="client-name">Michael Chen</p>
+          <p class="client-title">Chief Strategy Officer</p>
+          <p class="client-company">Global Retail Corporation</p>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="quote-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 21c3 0 7-1 7-8V5H3v8h4c0 5-4 8-4 8zm11 0c3 0 7-1 7-8V5h-7v8h4c0 5-4 8-4 8z"/>
+          </svg>
+        </div>
+        <p class="testimonial-text">
+          "Working with Xpert-One on our digital transformation initiative exceeded all expectations. They delivered measurable results and ensured smooth adoption across our organization."
+        </p>
+        <div class="client-info">
+          <p class="client-name">Jennifer Adams</p>
+          <p class="client-title">VP of Operations</p>
+          <p class="client-company">Healthcare Services Group</p>
+        </div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Satisfaction</div>
+  </div>
+</section> -->
+
+<section id="expertise" class="expertise-section">
+  <div class="container">
+    <div class="expertise-header">
+      <h2>World-Class Expertise</h2>
+      <p>Our team brings together diverse experiences and proven methodologies to solve your most complex challenges.</p>
     </div>
-    <div class="stat">
-      <div class="stat-number">13+</div>
-      <div class="stat-label">Years of Expertise</div>
+
+    <div class="expertise-grid">
+      <div class="expertise-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 15l-2 5L9 9l11 4-5 2zm0 0l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Industry Expertise</h3>
+        <p>Deep domain knowledge across 15+ industries including Human Resource, Operations, Operations Excellence, Training and Development, Finance, Retail, F&B, Hospitality, IT, FMCG, Retail, Health Care and Technology.</p>
+      </div>
+
+      <div class="expertise-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3>All Kerala Reach</h3>
+        <p>Presence across Kerala with consultants who understand local markets and trends.</p>
+      </div>
+
+      <div class="expertise-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <h3>Thought Leadership</h3>
+        <p>Published research and insights that shape industry conversations and drive innovation.</p>
+      </div>
+
+      <div class="expertise-item">
+        <div class="icon-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Collaborative Approach</h3>
+        <p>We work alongside your team, building capabilities and ensuring sustainable transformation.</p>
+      </div>
     </div>
   </div>
 </section>
 
-
-    <!-- Focus Areas Section -->
-    <section class="focus-areas fade-in">
-    <h2>Focus Areas</h2>
+<section id="about" class="leadership-section">
+  <div class="container">
+    <h2 class="section-title"> Meet our Xperts </h2>
     
-    <div class="focus-grid">
-        <div class="focus-item">
-        <h3>HR Innovations</h3>
-        <p>Navigating the complexities of HR management to drive organizational success.</p>
+    <div class="leadership-grid">
+      <div class="leader-card">
+        <div class="leader-image" style="background-image: url('images/khaled.jpg');"></div>
+        <div class="leader-info">
+          <h3>Khaled Zahran</h3>
+          <p class="role">Business Xpert</p>
+          <p class="specialty">Seasoned QSR operations leader with 18+ years of experience driving sales growth, operational excellence, and franchise performance across global brands including Yum!, Dunkin’, Burger King, and Pizza Hut.
+          <br>
+          Known for building high-performing teams, strengthening unit economics, and delivering consistent customer trust through world-class execution.</p>
         </div>
-        <div class="focus-item">
-        <h3>Financial Advisory</h3>
-        <p>Providing strategic financial guidance tailored to your business needs.</p>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-image" style="background-image: url('images/tina.jpeg');"></div>
+        <div class="leader-info">
+          <h3>Tina Rijo</h3>
+          <p class="role">Subject Matter Xpert</p>
+          <p class="specialty">Seasoned Legal & HR professional with 12+ years of multi-sector experience delivering strategic governance, compliance, and risk management across education, healthcare, and IT.
+            <br>
+            Known for integrating legal expertise with people operations, strengthening stakeholder trust, and enabling responsible, compliant organizational growth.</p>
         </div>
-        <div class="focus-item">
-        <h3>IT Solutions</h3>
-        <p>Delivering comprehensive IT solutions to support business growth.</p>
+      </div>
+
+      <div class="leader-card">
+        <div class="leader-image" style="background-image: url('images/alfy.jpg');"></div>
+        <div class="leader-info">
+          <h3>Alphonse Alfred</h3>
+          <p class="role">Operation Xpert</p>
+          <p class="specialty"> Seasoned business and operations professional with 16+ years of cross-industry experience spanning healthcare startups, education, and retail environments.
+          <br>
+          Known for building scalable systems, strengthening people practices, and enabling sustainable business growth across diverse organizational stages.</p>
         </div>
-        <div class="focus-item">
-        <h3>Operations Excellence</h3>
-        <p>Delivering streamlined operational solutions customized for your business growth.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-wrapper">
+      
+      <div class="contact-info">
+        <h2>Let's Start a Conversation</h2>
+        <p>Ready to transform your business? Get in touch with our team to discuss your challenges and explore how we can help.</p>
+        
+        <div class="info-list">
+          <div class="info-item">
+            <div class="icon-box blue-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p>+91-859-056-9759</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="icon-box blue-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@xpert-one.com</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="icon-box blue-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4>Head Office</h4>
+              <p>Edappally, Kochi 682024</p>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="focus-button">
-        <a href="#contact" class="connect">Connect with Us</a>
-    </div>
-
-    <div class="focus-img fade-in">
-        <img src="images\Discussing the Numbers.avif" alt="Mission Image" />
-    </div>
-
-    </section>
-
-    <!-- Approach Section -->
-    <section class="approach-section fade-in">
-    <h2>Our Approach</h2>
-    <p class="subheading">Methodology for Success</p>
-
-    <div class="approach-step">
-        <div class="step-number">01</div>
-        <div class="step-title">In-Depth Analysis</div>
-        <div class="step-description">Identifying challenges and opportunities for your business needs</div>
-    </div>
-
-    <div class="approach-step">
-        <div class="step-number">02</div>
-        <div class="step-title">Tailored Solutions</div>
-        <div class="step-description">Crafting customized strategies aligned with your business goals</div>
-    </div>
-
-    <div class="approach-step">
-        <div class="step-number">03</div>
-        <div class="step-title">Efficient Execution</div>
-        <div class="step-description">Achieving impactful and sustainable business outcomes</div>
-    </div>
-
-    <div class="approach-step">
-        <div class="step-number">04</div>
-        <div class="step-title">Ongoing Support</div>
-        <div class="step-description">Continuous monitoring and advisory services</div>
-    </div>
-    </section>
-    
-
-
-    <section class="contact-section fade-in" id="contact">
-    <div class="contact-left">
-        <h2>Start Your<br>Journey</h2>
-        <p>+91-85905-69759 &nbsp;&nbsp; Kerala, India</p>
-        <a href="https://wa.me/918590569759" target="_blank">
-            Chat with Us on WhatsApp
-        </a>
-        <p>hello@xpert-one.com</p>
-
-        <ul class="footer-links">
-        <li><a href="#">FAQ</a></li>
-        <li><a href="career.html">Career with us</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        </ul>
-    </div>
-
-    <div class="contact-right">
-        <h3>Reach Out to Rises</h3>
-        <form>
-        <label>First name *</label>
-        <input type="text" required>
-
-        <label>Last name *</label>
-        <input type="text" required>
-
-        <label>Email *</label>
-        <input type="email" required>
-
-        <label>Message</label>
-        <textarea rows="4"></textarea>
-
-        <button type="submit">Submit</button>
+      <div class="contact-form-container">
+        <form class="contact-form">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="John Doe" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="john@company.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" placeholder="Your Company">
+          </div>
+          
+          <div class="form-group">
+            <label>Message *</label>
+            <textarea placeholder="Tell us about your project or challenge..." rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Message</button>
         </form>
+      </div>
+      
     </div>
-    </section>
+  </div>
+</section>
 
-    <footer class="site-footer">
-  © 2025 by Xpertone Innovations Pvt Ltd
+  <!-- Footer -->
+  <footer class="main-footer">
+  <div class="container">
+    <div class="footer-grid">
+      
+      <div class="footer-col branding">
+        <div class="footer-logo">Xpert-One</div>
+        <p>Transforming businesses through strategic consulting and innovative solutions.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#">Strategic Planning</a></li>
+          <li><a href="#">Digital Transformation</a></li>
+          <li><a href="#">Organizational Design</a></li>
+          <li><a href="#">Change Management</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Insights</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/xpertonne/posts/?feedView=all" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+        <p class="footer-email">hello@xpert-one.com</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Xpert-One. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
 </footer>
-    
-
-    <script>
-    // Parallax Effect for Image
-    const image = document.querySelector('.boady_image img');
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        image.style.transform = `translateY(${scrollY * 0.3}px) scale(${1 + scrollY * 0.0005})`;
-    });
-
-    // Hamburger Menu Toggle with Animation
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    // Scroll Reveal Animation
-    const revealElements = document.querySelectorAll('.fade-in');
-
-    function revealOnScroll() {
-        const windowHeight = window.innerHeight;
-        revealElements.forEach(el => {
-        const elementTop = el.getBoundingClientRect().top;
-        if (elementTop < windowHeight - 100) {
-            el.classList.add('visible');
-        }
-        });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll); // Trigger on load for already visible elements
-    </script>
-    
+<a href="https://wa.me/+918590569759" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.937 3.659 1.432 5.631 1.433h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+<script src="js/script.js"></script>
 </body>
 </html>

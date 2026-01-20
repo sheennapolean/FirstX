@@ -1,0 +1,117 @@
+/* ========================
+   Main Footer Styles
+========================= */
+.main-footer {
+  background-color: #0b1221; /* Dark navy background from screenshot */
+  color: #ffffff;
+  padding: 80px 15% 30px;
+  font-size: 14px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-col.branding p {
+  color: #94a3b8;
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* Social and Connect */
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #94a3b8;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #ffffff;
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-email {
+  color: #94a3b8;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  color: #64748b;
+}
+
+.legal-links {
+  display: flex;
+  gap: 24px;
+}
+
+.legal-links a {
+  color: #64748b;
+  transition: color 0.2s ease;
+}
+
+.legal-links a:hover {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
+  .footer-col.branding {
+    grid-column: span 2;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
